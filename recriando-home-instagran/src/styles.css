@@ -1,0 +1,128 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+  width: min(90vw, 800px);
+  background: #e9e9e9;
+  margin: auto;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.table {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: 80% 20%;
+  grid-template-areas:
+    'col1 col2'
+    'fot fot';
+}
+
+.col-1 {
+  grid-area: col1;
+}
+
+.col-1 img {
+  width: 100%;
+}
+
+.col-2 {
+  grid-area: col2;
+  padding: 2rem 3rem;
+  margin-left: -3rem;
+}
+
+.col-2-content {
+  grid-area: col2;
+  background: #fff;
+  border: 0.1rem solid #c5c5c5;
+  padding: 1.3rem;
+  height: fit-content;
+}
+
+footer {
+  grid-area: fot;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 3rem 0;
+  font-size: 0.875rem;
+  color: #505050;
+}
+
+footer ul {
+  list-style-type: none;
+  display: inline-flex;
+  gap: 1.2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+}
+
+.logo img {
+  width: 175px;
+  height: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  padding: 1.7rem;
+}
+
+form input {
+  height: 33px;
+  background: rgb(175, 227, 240, 0.3);
+  border: 0.1rem solid #909090;
+  padding: 0.4rem;
+  outline: none;
+}
+
+form input:focus {
+  border: 0.12rem solid #404040;
+}
+
+.divisor {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 1.7rem;
+  margin-bottom: 2rem;
+}
+
+.divisor p {
+  text-align: center;
+}
+
+.mt-05 {
+  margin-top: 0.5rem;
+}
+
+.apple-store,
+.google-play {
+  width: 100px;
+  height: 40px;
+}
+
+.loja {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  padding: 1rem;
+
+  gap: 0.6rem;
+}
