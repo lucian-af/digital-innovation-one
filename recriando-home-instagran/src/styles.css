@@ -1,71 +1,120 @@
+:root {
+  --body: #fde7e7;
+  --gray600: #404040;
+  --gray500: #505050;
+  --gray200: #c5c5c5;
+  --gray100: #909090;
+  --white: #ffffff;
+  --red-primary: #ff5f5f;
+  --red-secondary: #c23a3a;
+  --red100: #ffd5d5;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: Roboto, Verdana, Geneva, Tahoma, sans-serif;
+  color: var(--gray600);
 }
 
 body {
-  width: min(90vw, 800px);
-  background: #e9e9e9;
+  width: 100%;
+  background: var(--body);
   margin: auto;
   height: 100vh;
   display: flex;
   align-items: center;
 }
 
+section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto;
+  padding: 0;
+}
+
 .table {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: 80% 20%;
-  grid-template-areas:
-    'col1 col2'
-    'fot fot';
+  grid-template-areas: 'col1 col2';
+  margin: auto;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  gap: 0.9rem;
 }
 
 .col-1 {
   grid-area: col1;
+  align-self: center;
+  background-position: 0 0;
+  background-size: 454px 618px;
+  flex-basis: 454px;
+  height: 618px;
+  margin-left: -35px;
+  display: flex;
+  align-items: stretch;
+  background: url(../assets/device.png);
+  flex-direction: column;
+  flex-shrink: 0;
+  padding: 0;
 }
 
-.col-1 img {
+.smart {
+  margin-top: 99px;
+  position: relative;
+  display: flex;
+  justify-content: space-evenly;
   width: 100%;
+  height: 70%;
+  align-items: center;
+  padding-left: 6.4rem;
+}
+
+#dio {
+  width: 200px;
+  left: 0;
+  position: relative;
+  top: 0;
+  z-index: 2;
 }
 
 .col-2 {
   grid-area: col2;
-  padding: 2rem 3rem;
+  padding: 2rem 3.1rem;
   margin-left: -3rem;
 }
 
 .col-2-content {
   grid-area: col2;
-  background: #fff;
-  border: 0.1rem solid #c5c5c5;
+  background: var(--white);
+  border: 0.1rem solid var(--gray200);
   padding: 1.3rem;
   height: fit-content;
+  border-radius: 3px;
 }
 
-footer {
-  grid-area: fot;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 1rem 3rem 0;
-  font-size: 0.875rem;
-  color: #505050;
-}
-
-footer ul {
-  list-style-type: none;
+.col-2-content h5 {
+  margin: 0;
+  padding-top: 0.5rem;
+  font-weight: 400;
   display: inline-flex;
-  gap: 1.2rem;
-  flex-wrap: wrap;
+  width: 100%;
   justify-content: center;
+  cursor: pointer;
+}
+
+.col-2-content h5 > a:hover {
+  text-decoration: underline;
 }
 
 .logo {
   display: flex;
   justify-content: center;
+  padding-top: 1rem;
 }
 
 .logo img {
@@ -82,14 +131,30 @@ form {
 
 form input {
   height: 33px;
-  background: rgb(175, 227, 240, 0.3);
-  border: 0.1rem solid #909090;
+  background: var(--red100);
+  border: 0.1rem solid var(--gray100);
   padding: 0.4rem;
   outline: none;
+  border-radius: 3px;
 }
 
 form input:focus {
-  border: 0.12rem solid #404040;
+  border: 0.12rem solid var(--gray600);
+}
+
+form button {
+  margin-top: 0.5rem;
+  height: 32px;
+  border: 0.1rem solid var(--red-secondary);
+  background: var(--red-primary);
+  cursor: pointer;
+  color: var(--gray600);
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+
+form button:hover {
+  opacity: 0.7;
 }
 
 .divisor {
@@ -99,6 +164,9 @@ form input:focus {
   justify-content: space-between;
   padding: 0 1.7rem;
   margin-bottom: 2rem;
+
+  font-size: 13px;
+  color: #505050;
 }
 
 .divisor p {
@@ -109,20 +177,77 @@ form input:focus {
   margin-top: 0.5rem;
 }
 
+.login-facebook {
+  margin: 0;
+  padding: 0;
+  font-weight: 500;
+  width: 100%;
+  display: inline-flex;
+  justify-content: center;
+  height: fit-content;
+  align-items: center;
+  gap: 0.7rem;
+}
+
+.login-facebook a {
+  cursor: pointer;
+}
+
+.login-facebook a:hover {
+  text-decoration: underline;
+}
+
+#facebook {
+  width: 16px;
+  height: 16px;
+  border-radius: 2px;
+}
+
 .apple-store,
 .google-play {
   width: 100px;
-  height: 40px;
+  height: 36px;
 }
 
 .loja {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
 
   width: 100%;
-  padding: 1rem;
+  padding: 2rem 1rem;
 
-  gap: 0.6rem;
+  gap: 0.5rem;
+}
+
+.loja > div {
+  display: inline-flex;
+  justify-content: space-around;
+  width: 75%;
+}
+
+footer {
+  display: flex;
+  font-size: 0.775rem;
+  color: var(--gray500);
+  margin-bottom: 4.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+footer ul {
+  list-style-type: none;
+  display: inline-flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 17.5rem;
+  line-height: 0.4rem;
+}
+
+@media (max-width: 800px) {
+  .col-1 {
+    display: none;
+  }
 }
