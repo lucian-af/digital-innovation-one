@@ -1,0 +1,31 @@
+@media screen and (max-width: 700px) {
+  body {
+    height: 100%;
+  }
+
+  header .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1rem;
+  }
+
+  header .resumo {
+    margin: 0.75rem 0;
+    text-align: center;
+  }
+
+  header nav {
+    margin: 0;
+    width: 100%;
+  }
+
+  .carrossel {
+    padding-top: 2px;
+    align-items: flex-start;
+  }
+  
+  #sobre {
+    padding-top: 1rem;
+    justify-content: initial;
+  }
+}

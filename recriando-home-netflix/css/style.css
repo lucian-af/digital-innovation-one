@@ -1,0 +1,150 @@
+@font-face {
+  font-family: 'Indie Flower';
+  src: url('../assets/fonts/IndieFlower-Regular.ttf');
+}
+
+:root {
+  --gray-50: #f7f8fa;
+  --gray-100: #e6e8eb;
+  --gray-200: #afb2b1;
+  --gray-500: #808080;
+  --gray-800: #494d4b;
+
+  --white: #ffffff;
+  --retrat: #e69d7b;
+  --swiper: #662113;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Indie Flower, Verdana, sans-serif;
+}
+
+body {
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+header {
+  background: var(--white);
+
+  display: flex;
+  align-items: center;
+
+  padding: 1rem 2rem;
+  border-bottom: 1px solid var(--gray-100);
+}
+
+header .container {
+  width: 100%;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .container div {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+header .container div img {
+  width: 42px;
+  height: 42px;
+}
+
+header .container div h2 {
+  width: 100%;
+  margin-left: 1rem;
+  padding: 0.25rem 0.75rem;
+  border-left: 1px solid var(--gray-100);
+}
+
+header .resumo {
+  font-size: 1.2em;
+  font-weight: 600;
+}
+
+header .container nav {
+  margin-left: auto;
+  text-transform: capitalize;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+header .container nav a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--gray-800);
+}
+
+header .container nav a:hover {
+  text-decoration: underline;
+  font-size: 21px;
+  color: var(--gray-500);
+}
+
+#sobre {
+  display: none;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0 2rem;
+  font-size: 30px;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+  height: calc(100vh - 81px);
+}
+
+#sobre a {
+  text-decoration: underline;
+  color: var(--retrat);
+}
+
+#sobre i:hover {
+  font-size: 105%;
+}
+
+.carrossel {
+  margin-top: 5px;
+  height: calc(100vh - 81px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.patinhas {
+  width: 100%;
+  padding-top: 1px;
+  height: calc(100vh - 76px);
+  position: absolute;
+  opacity: 0.8;
+}
+
+.item {
+  border: 15px outset var(--retrat);
+}
+
+.item img {
+  height: 100%;
+  width: 100%;
+  display: block;
+  cursor: pointer;
+  height: 380px;
+}
+
+.owl-theme .owl-dots .owl-dot span {
+  background: var(--swiper) !important;
+}
+
+.owl-theme .owl-dots .owl-dot.active span,
+.owl-theme .owl-dots .owl-dot:hover span {
+  opacity: 0.4;
+}
