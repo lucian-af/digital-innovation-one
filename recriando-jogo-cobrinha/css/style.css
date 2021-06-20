@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 100%;
+}
+.score {
+  width: 15%;
+  padding: 0 2rem;
+}
+
+#score {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+canvas {
+  border: 1px dashed #1b940b;
+}
